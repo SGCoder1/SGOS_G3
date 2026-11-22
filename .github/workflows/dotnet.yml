@@ -21,7 +21,7 @@ jobs:
       with:
         dotnet-version: 10.0.x
     - name: Install COSMOS
-      run: dotnet tool install -g Cosmos.Tools && cosmos install
+      run: dotnet tool install -g Cosmos.Tools && cosmos install -y
     - name: Restore dependencies
       run: dotnet restore
     - name: Create a COSMOS Project
