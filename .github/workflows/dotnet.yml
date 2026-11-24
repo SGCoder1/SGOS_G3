@@ -26,5 +26,9 @@ jobs:
       run: cosmos new test
     - name: Create a global.json (to keep stable)
       run: dotnet new globaljson --sdk-version 10.0.100 --roll-forward latestMinor -o .\test\
+    - name: Debug directory
+      run: |
+          Get-Location
+          Get-ChildItem -Recurse -Depth 3"
     - name: Build with COSMOS
       run: cosmos build -p .\test\ -a x64 -c Debug -v
