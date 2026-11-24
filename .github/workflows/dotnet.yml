@@ -29,6 +29,6 @@ jobs:
     - name: Debug directory
       run: |
           Get-Location
-          Get-ChildItem -Recurse -Depth 3"
+          Get-ChildItem -Recurse -Depth 3
     - name: Build with COSMOS
       run: cosmos build -p .\test\ -a x64 -c Debug -v
